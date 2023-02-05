@@ -61,7 +61,7 @@ function SignIn({nombre, foto}) {
     const submit = (e)=>{
         e.preventDefault();
         setHora("");
-        if(mensaje != ""){
+        if(mensaje !== ""){
           socket.emit('mensaje', nombre, mensaje, foto, hora)
         }
         setHora(getHora);
